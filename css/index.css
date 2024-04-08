@@ -5,7 +5,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    list-style: none;
     text-decoration: none;
     border: none;
     outline: none;
@@ -65,6 +64,7 @@ span
 .navbar
 {
     display: flex;
+    list-style-type: none;
 }
 
 .navbar a
@@ -153,11 +153,11 @@ span
     transform: translateX(100%);
 }
 
-.holiday .animate
+.conference .animate
 {
     transform: translateX(0);
 }
-.holiday.show-animate .animate
+.conference.show-animate .animate
 {
     transform: translateX(100%);
 }
@@ -177,7 +177,7 @@ section .animate
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-radius: 0 0 30% 15%; /* Adjust the border-radius values as needed */
+    border-radius: 0 0 10px 10px; /* Adjust the border-radius values as needed */
     overflow: hidden; /* Ensures the rounded corners are visible */
 }
 
@@ -213,14 +213,46 @@ section .animate
 .home-text-left 
 {
     position: absolute;
-    right: 20%;
+    right: 30%;
     bottom: 30%;
+    top: 40%;
 }
-
+.home-left{
+    position: absolute;
+    right: 18%;
+    top: 40%;
+}
 #h-left
 {
     color: var(--main-color);
+    display: block;
 }
+.important-dates
+{
+    position: relative;
+    top: 0%;
+}
+.important-dates ul h3
+{
+    color: #ffb5b5;
+    position: relative;
+    left: 15px;
+}
+.important-dates ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .important-dates li {
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px 8px 0 0;
+
+  }
+  .important-dates .date {
+    color: #ffa343;
+  }
 .btn
 {
     display: inline-block;
@@ -257,6 +289,7 @@ header.sticky
     align-items: center;
     text-align: center;
     gap:3rem;
+    justify-content: space-evenly;
 }
 
 .row-img
@@ -272,9 +305,11 @@ header.sticky
 
 .row-img img
 {
-    width: 100%;
+    width: 170%;
     display: block;
     transition: transform 0.7s;
+    object-fit: cover;
+    margin-top: 1px;
 }
 
 .row-img img:hover
@@ -295,20 +330,24 @@ header.sticky
     color: var(--main-color);
 }
 
-.holiday
+.conference
 {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 9rem;
+    text-align: justify;
+    padding: 15px 20px;
 }
-.holiday-img img
+.conference-img img
 {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    margin-left:35px;
 }
-.holiday-text h5
+
+.conference-text h5
 {
     font-size: 22px;
     font-weight: 600;
@@ -318,20 +357,21 @@ header.sticky
     margin-bottom: 20px;
 }
 
-.holiday-text h2
+.conference-text h2
 {
     font-size: var(--h2-font);
     font-weight: 800;
     line-height:1.2;
     margin-bottom: 25px;
 }
-.holiday-text p
+.conference-text p
 {
     font-size: var(--p-font);
     font-weight: 500;
     color: #ffffffab;
     line-height: 30px;
     margin-bottom: 35px;
+    text-align: justify;
 }
 
 .center-text
@@ -343,13 +383,20 @@ header.sticky
     font-size: var(--h2-font);
     font-weight: 800;
 }
+.center-text h3
+{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
 
-.tour-content
+.commitee-content
 {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,auto));
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap:100px;
     margin-top: 5em;
 }
 
@@ -359,38 +406,51 @@ header.sticky
 }
 .box img
 {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
-    filter: brightness(70%);
+    filter: brightness(60%);
     transition: all .3s cubic-bezier(.499,.05,.55,.95);
     will-change: filter;
     display: block;
+    transition: all .3s ease-in-out;
 }
 .box h6
 {
     position: absolute; /*It will move towards the image*/
     left:25px;
-    bottom: 95px;
+    bottom: 57px;
     font-size: 18px;
-    font-weight:500;
+    font-weight:800;
+    color: rgba(252, 208, 106, 0.868);
 }
 
 .box h4
 {
     position: absolute; /*It will move towards the image*/
     left:25px;
-    bottom: 65px;
-    font-size: 20px;
+    bottom: 30px;
+    font-size: 15px;
     font-weight:700;
 }
 .box img:hover
 {
-    filter: brightness(90%)hue-rotate(50deg);
+    filter: brightness(50%);
     transform: scale(1.04);
     cursor: pointer;
+    /* border: solid 2px var(--main-color); */
 }
+.box img::after
+{
+    transition: 0.5s;
+}
+.box img:hover h4
+{
+    filter: brightness(100%);
+    color: var(--main-color);
+}
+
 
 .center-btn
 {
@@ -405,6 +465,8 @@ header.sticky
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 9rem;
+    text-align: justify;
+    
 }
 .culture-img img
 {
@@ -437,7 +499,12 @@ header.sticky
     line-height: 30px;
     margin-bottom: 35px;
 }
-
+.culture li
+{
+    margin-bottom: 20px;
+    color: #ffffffab;
+    font-size:15px;
+}
 .newsletter-content
 {
     display: grid;
@@ -506,7 +573,7 @@ header.sticky
 .footer-box a:hover 
 {
     color: var(--text-color);
-    transform: translateX(-5px);
+    transform: translateX(5px);
 }
 
 .social a
@@ -528,7 +595,7 @@ header.sticky
 {
     background: var(--main-color);
     color: var(--bg-color);
-    transform: translateX(-4px);
+    transform: translateX(4px);
 }
 
 .copyright p
@@ -588,6 +655,10 @@ header.sticky
     {
         margin-left: 20px;
     }
+    .culture
+    {
+        padding: 50px;
+    }
 }
 
 @media (max-width:1153px)
@@ -596,7 +667,7 @@ header.sticky
     {
         gap: 1rem;
     }
-    .holiday
+    .conference
     {
         gap: 2.5rem;
     }
@@ -661,7 +732,14 @@ header.sticky
 
 @media(max-width:1095px)
 {
-   
+   .culture-text h5
+   {
+    font-size: 18px;
+   }
+   .culture-text h2
+   {
+    font-size: 25px;
+   }
     .navbar
     {
         position: absolute;
@@ -702,7 +780,7 @@ header.sticky
 
 @media(max-width:800px)
 {
-    .holiday
+    .conference
     {
         grid-template-columns: 1fr;
     }
@@ -733,6 +811,8 @@ header.sticky
         font-size: 3.8rem;
     }
 }
+
+
 @media (max-width:600px)
 {
 
@@ -778,6 +858,10 @@ header.sticky
 
 @media(max-width:430px)
 {
+    .header .logo
+    {
+        margin-top: 10px;
+    }
     
     :root 
     {
@@ -808,19 +892,19 @@ header.sticky
     {
         font-size: 1.5rem;
     }
-    .holiday-img img
+    .conference-img img
     {
         width: 80%;
         height: auto;
         margin-left: 35px;
     }
-    .holiday-text
+    .conference-text
     {
-        margin-left: 20px;
+        margin-left: 5px;
     }
     .box img
     {
-        width: 85%;
+        width: 80%;
         height: 80%;
     }
     .tour-content
@@ -829,7 +913,7 @@ header.sticky
     }
     .box img:hover
     {
-        filter: brightness(90%)hue-rotate(50deg);
+        filter: brightness(50%)hue-rotate(0deg);
         transform: scale(1.03);
         cursor: pointer;
     }
@@ -841,7 +925,7 @@ header.sticky
     }
     .culture-text
     {
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .home-text
     {
@@ -856,5 +940,32 @@ header.sticky
     body
     {
         box-sizing: border-box;
+    }
+    .box
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .box h4, .box h6
+    {   
+        position: absolute;
+        text-align: center;
+        left:50px;
+    }
+    .newsletter-content form input:first-child,
+    .newsletter-content form .btn
+    {
+        display: flex;
+        flex-direction: column;
+        padding:5px 4px;
+        font-size: 15px;
+    }
+    .newsletter-content form .btn
+    {
+        padding:5px 5px;
+    }
+    .btn:hover
+    {
+        transform: translateX(5px);
     }
 }
