@@ -281,7 +281,11 @@ header.sticky
     background: transparent;
     backdrop-filter: blur(35px);
 }
-
+header.sticky a
+{
+    margin-top:5px;
+    margin-left:5px;
+}
 .feature-content
 {
     display: grid;
@@ -725,6 +729,10 @@ header.sticky
     {
         font-size: 25px;
     }
+    .navbar a
+    {
+        font-size: 0.85rem;
+    } 
     
     
 }
