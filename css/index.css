@@ -171,7 +171,7 @@ section .animate
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../img/globe.jpg);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../img/globle.jpeg);
     background-size: cover;
     background-position: bottom center;
     display: flex;
@@ -462,7 +462,7 @@ header.sticky a
 }
 
 
-.culture
+.papersubmission
 {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -471,13 +471,13 @@ header.sticky a
     text-align: justify;
     
 }
-.culture-img img
+.papersubmission-img img
 {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
-.culture-text h5
+.papersubmission-text h5
 {
     font-size: 22px;
     font-weight: 600;
@@ -487,14 +487,14 @@ header.sticky a
     margin-bottom: 20px;
 }
 
-.culture-text h2
+.papersubmission-text h2
 {
     font-size: var(--h2-font);
     font-weight: 800;
     line-height:1.2;
     margin-bottom: 25px;
 }
-.culture-text p
+.papersubmission-text p
 {
     font-size: var(--p-font);
     font-weight: 500;
@@ -502,7 +502,7 @@ header.sticky a
     line-height: 30px;
     margin-bottom: 35px;
 }
-.culture li
+.papersubmission li
 {
     margin-bottom: 20px;
     color: #ffffffab;
@@ -658,7 +658,7 @@ header.sticky a
     {
         margin-left: 20px;
     }
-    .culture
+    .papersubmission
     {
         padding: 50px;
     }
@@ -674,7 +674,7 @@ header.sticky a
     {
         gap: 2.5rem;
     }
-    .culture
+    .papersubmission
     {
         gap: 2.5rem;
     }
@@ -739,11 +739,11 @@ header.sticky a
 
 @media(max-width:1095px)
 {
-   .culture-text h5
+   .papersubmission-text h5
    {
     font-size: 18px;
    }
-   .culture-text h2
+   .papersubmission-text h2
    {
     font-size: 25px;
    }
@@ -791,7 +791,7 @@ header.sticky a
     {
         grid-template-columns: 1fr;
     }
-    .culture
+    .papersubmission
     {
         grid-template-columns: 1fr;
     }
@@ -946,13 +946,13 @@ header.sticky a
         transform: scale(1.03);
         cursor: pointer;
     }
-    .culture-img img
+    .papersubmission-img img
     {
         width:80%;
         height: auto;
         margin-left: 30px;
     }
-    .culture-text
+    .papersubmission-text
     {
         margin-left: 10px;
     }
